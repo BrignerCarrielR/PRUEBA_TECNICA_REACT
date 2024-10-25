@@ -21,7 +21,7 @@ class Visitante(models.Model):
     def __str__(self):
         return self.nombre
 
-
+# Este modelo no se utilizó
 class EstadisticasVisitas(models.Model):
     fecha_visita = models.DateField()
     numero_visitas = models.IntegerField(default=0)

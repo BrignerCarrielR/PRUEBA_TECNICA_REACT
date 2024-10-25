@@ -8,7 +8,7 @@ export default function Estadisticas() {
     const [estadisticas, setEstadisticas] = useState({
         totalVisitas: 0,
         horaPico: '',
-        promedioVisitasPorHora: 0,
+        promedioVisitasPorHora: 0.0,
     });
     const [barChart, setBarChart] = useState(null);
 
@@ -43,7 +43,7 @@ export default function Estadisticas() {
         setEstadisticas({
             totalVisitas,
             horaPico: `${horaPico}:00 - ${parseInt(horaPico) + 1}:00`,
-            promedioVisitasPorHora: Math.round(promedioVisitasPorHora),
+            promedioVisitasPorHora: promedioVisitasPorHora,
         });
 
         // Configura el gráfico

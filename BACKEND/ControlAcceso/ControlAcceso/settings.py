@@ -36,7 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App.apps.AppConfig',
+     # definimos para usar apis
     'rest_framework',
+     # definimos para darle permiso para que otras url de usar la API
     'corsheaders',
 ]
 CORS_ALLOWED_ORIGINS = [
@@ -51,7 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
+    
+    # definimos para darle permiso para que otras url de usar la API
     'corsheaders.middleware.CorsMiddleware',
 ]
 

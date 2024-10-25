@@ -37,7 +37,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                     });
                     navigate('/inicio');
                     setError('');
-
+                    localStorage.setItem('existe', JSON.stringify(data.existe));
                 } else {
                     toast.error('Credenciales incorrectas.', {
                         position: 'top-right'

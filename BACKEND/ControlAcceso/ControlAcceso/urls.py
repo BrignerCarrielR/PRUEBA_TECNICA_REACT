@@ -11,6 +11,7 @@ router.register(r'estadisticas-visitas', EstadisticasVisitasViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls)),  # Incluye las rutas del router
+    path('', include(router.urls)),  # incluimos las rutas del router
+    # definimos la url para el login
     path('login/', LoginResidenteView.as_view(), name='login_residente'),
 ]

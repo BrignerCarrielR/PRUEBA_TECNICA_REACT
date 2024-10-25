@@ -29,14 +29,14 @@ class LoginResidenteView(APIView):
         nombre = request.data.get('nombre')
         numero_identificacion = request.data.get('numero_identificacion')
 
-        # Validar que ambos campos se hayan proporcionado
+        # Validamos que los campos sean ingresados
         if not nombre or not numero_identificacion:
             return Response(
                 {"detail": "Nombre y número de identificación son requeridos."},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Verificar si el residente existe
+        # Verificamos que el residente exista
         existe = Residente.objects.filter(
             nombre=nombre,
             numero_identificacion=numero_identificacion
